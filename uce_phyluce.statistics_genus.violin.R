@@ -9,7 +9,7 @@ library(dplyr)
 library(readr)
 
 # 设置输入文件路径
-input_file <- "C:/Users/l/Desktop/341spp.UCE.statistics.txt"
+input_file <- "C:/Users/l/Desktop/313spp.UCE.statistics.csv"
 
 # 自动获取输出目录（与输入文件同位置）
 output_dir <- dirname(input_file)
@@ -64,8 +64,8 @@ print(p)
 png_output <- file.path(output_dir, "uce_count_distribution_by_genus_violin.png")
 pdf_output <- file.path(output_dir, "uce_count_distribution_by_genus_violin.pdf")
 
-ggsave(png_output, p, width = 10, height = 6, dpi = 300, bg = "white")  # 调整宽度适应更多的属名
-ggsave(pdf_output, p, width = 10, height = 6, bg = "white")
+ggsave(png_output, p, width = 40, height = 6, dpi = 300, bg = "white")  # 调整宽度适应更多的属名
+ggsave(pdf_output, p, width = 40, height = 6, bg = "white")
 
 cat("✅ 小提琴图 (PNG) 已保存到：", png_output, "\n")
 cat("✅ 小提琴图 (PDF) 已保存到：", pdf_output, "\n")
